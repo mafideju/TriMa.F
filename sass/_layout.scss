@@ -5,6 +5,13 @@
   box-shadow: var(--shadow-dark);
 
   min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .header {
@@ -16,10 +23,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    height: 12rem;
+  }
+
+  &__brand {
+    margin-left: -17rem;
+
+    @media only screen and (max-width: $bp-mid) {
+      display: none;
+    }
+
+    @media only screen and (max-width: $bp-mid) {
+      margin-left: -14.5rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      margin-left: -20rem;
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+      margin-left: -15rem;
+    }
+  }
 }
 
 .content {
   display: flex;
+  
+  @media only screen and (max-width: $bp-mid) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -45,6 +81,14 @@
   display: flex;
   font-size: 1.4rem;
   padding: 4.5rem;
+
+  @media only screen and (max-width: $bp-mid) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small ) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -53,6 +97,16 @@
   flex: 0 0 60%;
   padding: 3rem;
   margin-right: 4.5rem;
+
+  @media only screen and (max-width: $bp-mid) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small ) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 .user-reviews {
